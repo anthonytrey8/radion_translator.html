@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radion Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #translator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="translator">
+        <h1>Radion Translator</h1>
+        <p>Enter an English word to translate it to Radion:</p>
+        <input type="text" id="englishWord" placeholder="Enter English word">
+        <button onclick="translateWord()">Translate</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function translateWord() {
+            const dictionary = {
+                "hello": "karo",
+                "goodbye": "lokra",
+                "please": "velemi",
+                "thank you": "grato",
+                "yes": "su",
+                "no": "ne",
+                "I": "mi",
+                "you": "ju",
+                "speak": "vori",
+                "air": "ær",
+                "airline": "ærlok",
+                "sky": "veksen",
+                "house": "dom",
+                "friend": "kara",
+                "water": "asti",
+                "fire": "aron",
+                "car": "vehko",
+                "night": "nox",
+                "light": "luma",
+                "day": "weka",
+                "star": "ustra",
+                "Radia": "Radon",
+                "welcome": "vekaros"
+            };
+
+            const input = document.getElementById("englishWord").value.toLowerCase();
+            const result = dictionary[input];
+
+            if (result) {
+                document.getElementById("result").innerHTML = `"${input}" in Radion is: <strong>${result}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = `Sorry, no translation found for "${input}".`;
+            }
+        }
+    </script>
+</body>
+</html>
