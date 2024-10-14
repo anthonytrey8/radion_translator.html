@@ -51,6 +51,7 @@
     <script>
         function translateWord() {
             const dictionary = {
+                // Simple Words
                 "hello": "karo",
                 "goodbye": "lokra",
                 "please": "velemi",
@@ -59,21 +60,159 @@
                 "no": "ne",
                 "I": "mi",
                 "you": "ju",
-                "speak": "vori",
-                "air": "ær",
-                "airline": "ærlok",
-                "sky": "veksen",
-                "house": "dom",
+                "we": "nu",
                 "friend": "kara",
+                "house": "dom",
+                "air": "ær",
+                "sky": "veksen",
+                "car": "vehko",
+                "day": "weka",
+                "night": "nox",
                 "water": "asti",
                 "fire": "aron",
-                "car": "vehko",
-                "night": "nox",
-                "light": "luma",
-                "day": "weka",
                 "star": "ustra",
                 "Radia": "Radon",
-                "welcome": "vekaros"
+                "welcome": "vekaros",
+                "speak": "vori",
+                "for": "fáŕ"
+                
+                // Formal Words
+                "greetings": "veko",
+                "farewell": "lokra-fem",
+                "how are you": "kwa ju senti",
+                "I'm fine": "mi senti bona",
+                "excuse me": "enti velo",
+                "please help": "velemi ju su",
+                "honor": "onor",
+                "respect": "velera",
+                "kindness": "benra",
+                "knowledge": "senra",
+
+                // Curse Words (keep it minimal and simple)
+                "stupid": "sreta",
+                "idiot": "idrul",
+                "fool": "dola",
+                "damn": "draka",
+                "shit": "sreta",
+                "hell": "nokar",
+                "bastard": "noka",
+                "shut up": "strak",
+                "ugly": "vesha",
+                "worthless": "relka",
+                "coward": "tralka",
+                "fuck": "nar"
+                "sex": "slexa"
+                "masturbate": "Buitemust"
+                "Airbus": "AeroBus"
+                "Boeing": "ʙoeinć"
+                
+                // Additional Nouns & Verbs
+                "fly": "velti",
+                "run": "kri",
+                "eat": "et",
+                "drink": "vokti",
+                "learn": "edji",
+                "build": "strukto",
+                "write": "priti",
+                "hear": "soni",
+                "see": "loki",
+                "move": "movi",
+                "shine": "lumi",
+                "create": "kreti",
+                "feel": "senti",
+                "light": "luma",
+                "land": "ter",
+                "balloon": "balen",
+                "apple": "vokro",
+                "flower": "floro",
+                "train": "treno",
+                "motorcycle": "moto",
+
+                // Numbers
+                "one": "uno",
+                "two": "duo",
+                "three": "tri",
+                "four": "katro",
+                "five": "pento",
+                "six": "seko",
+                "seven": "septo",
+                "eight": "okto",
+                "nine": "neno",
+                "ten": "deco"
+            };
+
+            const input = document.getElementById("englishWord").value.toLowerCase();
+            const result = dictionary[input];
+
+            if (result) {
+                document.getElementById("result").innerHTML = `"${input}" in Radion is: <strong>${result}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = `Sorry, no translation found for "${input}".`;
+            }
+        }
+    </script>
+</body>
+</html>
+
+                
+                // Formal Words
+                "greetings": "veko",
+                "farewell": "lokra-fem",
+                "how are you": "kwa ju senti",
+                "I'm fine": "mi senti bona",
+                "excuse me": "enti velo",
+                "please help": "velemi ju su",
+                "honor": "onor",
+                "respect": "velera",
+                "kindness": "benra",
+                "knowledge": "senra",
+                
+                // Curse Words (keep it minimal and simple)
+                "stupid": "sreta",
+                "idiot": "idrul",
+                "fool": "dola",
+                "damn": "draka",
+                "shit": "sreta",
+                "hell": "nokar",
+                "bastard": "noka",
+                "shut up": "strak",
+                "ugly": "vesha",
+                "worthless": "relka",
+                "coward": "tralka",
+
+                // Additional Nouns & Verbs
+                "fly": "velti",
+                "run": "kri",
+                "eat": "et",
+                "drink": "vokti",
+                "learn": "edji",
+                "build": "strukto",
+                "write": "priti",
+                "hear": "soni",
+                "see": "loki",
+                "move": "movi",
+                "shine": "lumi",
+                "create": "kreti",
+                "feel": "senti",
+                "light": "luma",
+                "land": "ter",
+                "balloon": "balen",
+                "apple": "vokro",
+                "flower": "floro",
+                "train": "treno",
+                "motorcycle": "moto",
+
+                // Numbers
+                "one": "uno",
+                "two": "duo",
+                "three": "tri",
+                "four": "katro",
+                "five": "pento",
+                "six": "seko",
+                "seven": "septo",
+                "eight": "okto",
+                "nine": "neno",
+                "ten": "deco"
             };
 
             const input = document.getElementById("englishWord").value.toLowerCase();
